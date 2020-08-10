@@ -1,1 +1,1 @@
-0 0 6 * * ?
+0 6 * * * /root/jktb_script/fuck.py

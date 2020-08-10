@@ -1,0 +1,10 @@
+phone = 1234567890
+card = 1234
+
+use_email = True
+email = 'example@host.com'
+email_password = 'xxxxx'
+host = 'smtp.host.com'
+host_port = 25
+
+wechat_code = '方糖的code码'

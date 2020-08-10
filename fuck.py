@@ -64,7 +64,7 @@ def fk(phone, id_last, school=None, isDebug=False):
     # 跳转到修改页面 以获得原始数据 然后反手再传回服务器
     response = sess.post(init_url, {'do': 'init'}, headers=Header)
 
-    js = json.loads(response.content, encoding='utf-8')
+    js = json.loads(response.text, encoding='utf-8')
     data = js['data']
     data['touchWhere'] = 0
     data['do'] = 'ajax'
@@ -72,7 +72,7 @@ def fk(phone, id_last, school=None, isDebug=False):
     # 签到操作
     response = sess.post(init_url, data=data, headers=Header)
     print(response.text)
-    js = json.loads(response.content, encoding='utf-8')
+    js = json.loads(response.text, encoding='utf-8')
     msg = js['msg']
     print('msg:' + msg)
 
